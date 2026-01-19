@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+
+:root {
+  /* Reduce animation delay for animate.css */
+  --animate-delay: 0.5s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Stops animations */
+  .animate__animated {
+    animation: none !important;
+  }
+
+  /* Avoids non-essential transitions/movements */
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+    transition-delay: 0ms !important;
+  }
+}
